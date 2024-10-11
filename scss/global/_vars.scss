@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,regular,500,600,700,800,900');
+
+$Poppins: "Poppins", sans-serif;
+
+body {
+	font-family: $Poppins;
+	line-height: 1;
+	font-size: 1rem;
+	/* Use relative unit */
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

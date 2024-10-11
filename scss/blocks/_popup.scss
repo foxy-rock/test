@@ -1,0 +1,81 @@
+.popup {
+    background-color: #00000063;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 10000000000000000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out 0s;
+
+    &__body {
+        background-color: #fff;
+        border-radius: 30px;
+        position: relative;
+    }
+
+    &__form {
+        padding: 40px 20px 60px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-family: 'SegoeUI', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 50px;
+            text-align: center;
+            color: #222222;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        input {
+            padding: 18px 0px 18px 25px;
+            width: 100%;
+            border: 1px solid #C7C7C7;
+            border-radius: 6px;
+            color: #000000;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &-box {
+            display: flex;
+            gap: clamp(60px, 5vh, 20px);
+
+            p {
+                width: 290px;
+                a {
+                    color: #ccab7a;
+                    text-decoration: underline;
+                }
+            }
+
+            button {
+                display: block;
+                width: 200px;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+}
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
